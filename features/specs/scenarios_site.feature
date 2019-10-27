@@ -1,9 +1,13 @@
 #language: pt
 
-Funcionalidade: Desafio inmetrics.
--Eu como candidato ser aprovado no processo.
-
 @site
+Funcionalidade: Desafio inmetrics.
+-Eu como usuario desejo navegar pelo site da Inmetrics
+
+Contexto: 
+    Dado que eu acesso o site da Inmetrics
+
 Cenario: Realizar busca por vagas no site da Empresa
-  Quando eu somo 2 + 2
-  Então o resultado tem que ser 4
+  E desejo visualizar as opções de carreira
+  Quando eu selecionar o button para conferir vagas disponiveis
+  Entao devo ser direcionado para pagina de oportunidades
