@@ -4,6 +4,7 @@ require 'httparty'
 require 'site_prism'
 require_relative 'helper.rb'
 require_relative 'page_helper.rb'
+require 'rspec'
 
 AMBIENTE = ENV['AMBIENTE']
 

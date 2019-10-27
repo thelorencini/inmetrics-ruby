@@ -15,3 +15,16 @@ Entao("devo ser direcionado para pagina de oportunidades") do
   page_vagas = VagasPage.new
   page_vagas.valida_direcionamento
 end
+
+Dado("o endereco da API para manter films") do
+ # alreadyset"
+end
+
+Quando("eu realizar uma requisição para pegar as informações") do
+  $response = @api_films.getStartup
+  @api_films.validaResponse($response)
+end
+
+Entao("irei filtrar filmes por diretor {string} e produtor {string}") do |director, producer|
+  @api_films.trataGet(director, producer, $response)
+end

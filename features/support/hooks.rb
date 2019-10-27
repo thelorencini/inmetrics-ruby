@@ -1,18 +1,7 @@
 require 'pry'
-#Before do
- # execute before
-#end
-
-#After do
-  # execute after
-#end
-
-Before '@site' do
- # visit 
-end
 
 Before '@api' do
- @env_api_response = HTTParty.get("https://swapi.co/api/films/")
+ @api_films = ApiFilmes.new
 end
 
 After '@site' do |scenario|
